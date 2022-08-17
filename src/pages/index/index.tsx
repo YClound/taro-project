@@ -14,12 +14,12 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
-  onShareAppMessage() {
-    console.log('33333333333');
-    return {
-      title: '首页分享'
-    }
-  }
+  // onShareAppMessage() {
+  //   console.log('页面分享测试');
+  //   return {
+  //     title: '页面分享测试'
+  //   }
+  // }
 
   render () {
     return (
