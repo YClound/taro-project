@@ -1,31 +1,16 @@
-import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.less'
+import { View, Text } from '@tarojs/components';
+import { useLoad } from '@tarojs/taro';
+import './index.less';
 
-export default class Index extends Component {
+export default function Index() {
 
-  componentWillMount () { }
+  useLoad(() => {
+    console.log('Page loaded.')
+  })
 
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  // onShareAppMessage() {
-  //   console.log('页面分享测试');
-  //   return {
-  //     title: '页面分享测试'
-  //   }
-  // }
-
-  render () {
-    return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-      </View>
-    )
-  }
+  return (
+    <View className='index pl-2'>
+      <Text>Hello world!</Text>
+    </View>
+  )
 }

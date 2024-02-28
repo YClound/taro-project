@@ -1,16 +1,20 @@
 {
-  "name": "myApp",
+  "name": "my-taro-project",
   "version": "1.0.0",
   "private": true,
-  "description": "init taro project",
+  "description": "",
   "templateInfo": {
     "name": "default",
     "typescript": true,
-    "css": "less"
+    "css": "Less",
+    "framework": "React"
   },
   "scripts": {
-    "dev": "npm run build -- --watch",
-    "build": "taro build --type alipay"
+    "dev": "npm run build -- --mode=dev --watch",
+    "build:test": "npm run build --mode=test",
+    "build:prod": "npm run build --mode=prod",
+    "build": "taro build --type alipay",
+    "postinstall": "weapp-tw patch"
   },
   "browserslist": [
     "last 3 versions",
@@ -19,30 +23,45 @@
   ],
   "author": "",
   "dependencies": {
-    "@babel/runtime": "^7.7.7",
-    "@tarojs/components": "3.4.13",
-    "@tarojs/runtime": "3.4.13",
-    "@tarojs/taro": "3.4.13",
-    "@tarojs/plugin-framework-react": "3.4.13",
-    "@tarojs/react": "3.4.13",
-    "react-dom": "^17.0.0",
-    "react": "^17.0.0"
+    "@babel/runtime": "^7.21.5",
+    "@tarojs/components": "3.6.23",
+    "@tarojs/helper": "3.6.23",
+    "@tarojs/plugin-framework-react": "3.6.23",
+    "@tarojs/plugin-platform-alipay": "3.6.23",
+    "@tarojs/react": "3.6.23",
+    "@tarojs/runtime": "3.6.23",
+    "@tarojs/shared": "3.6.23",
+    "@tarojs/taro": "3.6.23",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.13.6",
-    "@types/react": "^17.0.2",
-    "@tarojs/mini-runner": "3.4.13",
     "@babel/core": "^7.8.0",
-    "@tarojs/webpack-runner": "3.4.13",
-    "babel-preset-taro": "3.4.13",
-    "eslint-config-taro": "3.4.13",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
+    "@tarojs/cli": "3.6.23",
+    "@tarojs/taro-loader": "3.6.23",
+    "@tarojs/webpack5-runner": "3.6.23",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.0",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "autoprefixer": "^10.4.17",
+    "babel-preset-taro": "3.6.23",
     "eslint": "^8.12.0",
-    "eslint-plugin-react": "^7.8.2",
+    "eslint-config-taro": "3.6.23",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "postcss": "^8.4.35",
+    "postcss-rem-to-responsive-pixel": "^6.0.1",
+    "react-refresh": "^0.11.0",
     "stylelint": "^14.4.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "typescript": "^4.1.0"
+    "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5.1.0",
+    "weapp-tailwindcss": "^3.0.10",
+    "webpack": "5.78.0"
   }
 }

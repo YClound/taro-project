@@ -1,11 +1,13 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "myApp",
-  "description": "init taro project",
+  "projectname": "my-taro-project",
+  "description": "",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,
     "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
     "postcss": false,
     "minified": false
   },

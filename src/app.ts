@@ -1,27 +1,15 @@
-import { Component } from 'react'
+import { PropsWithChildren } from 'react'
+import { useLaunch } from '@tarojs/taro'
 import './app.less'
 
-class App extends Component {
+function App({ children }: PropsWithChildren<any>) {
 
-  componentDidMount () {}
+  useLaunch(() => {
+    console.log('App launched.')
+  })
 
-  componentDidShow () {}
-
-  componentDidHide () {}
-
-  componentDidCatchError () {}
-
-  onShareAppMessage(){
-    console.log('全局分享测试')
-    return {
-      title: '全局分享测试'
-    }
-  }
-
-  // this.props.children 是将要会渲染的页面
-  render () {
-    return this.props.children
-  }
+  // children 是将要会渲染的页面
+  return children
 }
 
 export default App
